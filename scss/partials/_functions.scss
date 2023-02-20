@@ -1,0 +1,71 @@
+$icons: cloud,
+customise,
+plane;
+
+@each $icon in $icons {
+  .ic-#{$icon}::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    width: 95px;
+    height: 70px;
+    background: url(../images/ic-#{$icon}.png) 50% no-repeat;
+
+    @include lg {
+      height: 122px;
+    }
+
+  }
+}
+
+
+
+.functions {
+  background: url(../images/functions-pattern.jpg);
+
+
+
+  &_wrap {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm {
+      flex-direction: row;
+      padding: 30px 0px 7px 0px;
+    }
+
+    @include lg {
+      padding-bottom: 4px;
+    }
+
+    @include lg {
+      padding-top: 42px;
+    }
+
+    &-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 23.05px;
+      font-family: $addFont;
+      color: #000;
+      position: relative;
+      padding: 73px 0px 19px 0px;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @include sm {
+        padding-top: 85px;
+      }
+
+      @include lg {
+        font-size: 27.05px;
+        padding: 107px 0px 29px 35px;
+
+      }
+    }
+  }
+}

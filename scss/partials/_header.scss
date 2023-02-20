@@ -1,0 +1,210 @@
+$icons: mail,
+person,
+services;
+
+@each $icon in $icons {
+  .ic-#{$icon}::before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/ic-#{$icon}.png) 50% no-repeat;
+
+    @include sm {
+      left: 18px;
+      top: -4px;
+      width: 35px;
+      height: 35px;
+
+    }
+
+    @include lg {
+      top: -9px;
+      left: 6px;
+    }
+  }
+}
+
+.header {
+
+  @include lg {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    padding-bottom: 93px;
+  }
+
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    @include lg {
+      padding: 28px 0px 71px 0px;
+      align-items: center;
+    }
+
+    &_logo {
+      display: block;
+      background: url(../images/logo-pattern.jpg),
+        linear-gradient(to bottom, #5e5e5e, #454545);
+
+      @include sm {
+        width: 29%;
+      }
+
+      @include lg {
+        background: none;
+      }
+
+      &-pic {
+        width: 30%;
+        height: 30%;
+        margin: 15px;
+
+        @include sm {
+          width: 81%;
+          height: 82%;
+          margin: 2px 17px 10px 18px;
+        }
+
+        @include lg {
+          width: 93%;
+          margin: 0px 21px 3px 0px;
+        }
+      }
+
+
+    }
+
+    &_span {
+      display: none;
+
+      @include lg {
+        display: block;
+        font-family: $addFont;
+        font-size: 13.05px;
+        text-transform: uppercase;
+        padding: 24px 0px 0px 13px;
+
+        &-link {
+          text-decoration: none;
+          color: #fff;
+
+        }
+      }
+    }
+
+    &_nav {
+      background: url(../images/nav-pattern.jpg);
+      display: flex;
+      padding: 15px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm {
+        flex-grow: 1;
+        padding: 0 15px 0px 0;
+      }
+
+      @include lg {
+        flex-grow: 0;
+        margin-left: auto;
+        width: 37.8%;
+        padding: 10px 24px 10px 29px;
+
+        background: $yellowColor;
+      }
+
+      &-link {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #9b7d08;
+        font-family: $addFont;
+        position: relative;
+        padding: 0px 0px 0px 32px;
+
+        @include sm {
+          font-size: 19.05px;
+          padding: 3px 0px 0px 56px;
+          line-height: 19px;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 247%;
+            background-color: #9b7d08;
+            right: -16px;
+            top: -16px;
+
+            @include lg {
+              height: 196%;
+              right: -25px;
+              top: -9px;
+            }
+          }
+        }
+
+        @include lg {
+          font-size: 17.05px;
+          padding: 0px 0px 0px 43px;
+        }
+
+      }
+    }
+  }
+
+
+  &_content {
+
+    @include lg {
+      display: flex;
+    }
+
+    &_video {
+      &-pic {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &_title {
+      display: none;
+      font-size: 63px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $yellowColor;
+      flex-grow: 1;
+      padding: 53px 0px 0px 48px;
+      font-weight: 400;
+      font-family: $addFont;
+      letter-spacing: 0.3px;
+
+      @include lg {
+        display: block;
+      }
+
+      &-span {
+        display: block;
+        color: #fff;
+        letter-spacing: 0.3px;
+        padding: 3px 0px 0px 14px;
+      }
+    }
+
+  }
+
+
+
+
+}

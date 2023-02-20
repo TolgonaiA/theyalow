@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0px;
+  margin: 0 auto;
+
+  @include lg {
+    padding: 0 15px;
+  }
+}
+
+.row {
+  display: flex;
+  margin: 0 -9px
+}
+
+.col {
+  @include block-item;
+}
+
+.col-sm {
+  @include sm {
+    @include block-item;
+  }
+}
+
+
+.col-md {
+  @include md {
+    @include block-item;
+  }
+}
